@@ -7,6 +7,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import static com.example.julia.com.cookies.R.drawable.after_cookie;
+import static com.example.julia.com.cookies.R.drawable.before_cookie;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -29,5 +30,13 @@ public class MainActivity extends AppCompatActivity {
         TextView beforeCookieTextView = (TextView) findViewById(R.id.status_text_view);
         beforeCookieTextView.setText("I'm so full");
 
+    }
+
+    public void reset(View view) {
+        ImageView afterCookieImageView = (ImageView) findViewById(R.id.android_cookie_image_view);
+        afterCookieImageView.setImageResource(before_cookie);
+
+        TextView afterCookieTextView = (TextView) findViewById(R.id.status_text_view);
+        afterCookieTextView.setText("I'm so hungry");
     }
 }
